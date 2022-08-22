@@ -45,7 +45,7 @@
     <!-- ============ main start ================== -->
     <main class="container mt-5">
 
-        <section id="must-extra-section" class="row row-cols-2">
+        <section id="must-extra-section" class="row row-cols-2 flex-column-reverse flex-md-row">
             <!-- Note: {.must-extra-section} section is must for justify this main's section and main's aside center -->
             <!-- card-section start -->
             <section class="main-body w-75 text-white mx-auto">
@@ -57,7 +57,7 @@
                             <img src="source/Rectangle 144.png" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Lionel Messi</h5>
-                                <p class="text-secondary">
+                                <p class="text-secondary my-3 ">
                                     <span>36 Goals</span>
                                     <span>.</span>
                                     <span>120 Assist</span>
@@ -72,7 +72,7 @@
                             <img src="source/Rectangle 144 (1).png" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Neymar Jr</h5>
-                                <p class="text-secondary">
+                                <p class="text-secondary my-3 ">
                                     <span>36 Goals</span>
                                     <span>.</span>
                                     <span>120 Assist</span>
@@ -87,7 +87,7 @@
                             <img src="source/Rectangle 144 (2).png" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Kylian Mbappé</h5>
-                                <p class="text-secondary">
+                                <p class="text-secondary my-3 ">
                                     <span>36 Goals</span>
                                     <span>.</span>
                                     <span>120 Assist</span>
@@ -102,7 +102,7 @@
                             <img src="source/Rectangle 144 (3).png" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Vítor Machado</h5>
-                                <p class="text-secondary">
+                                <p class="text-secondary my-3 ">
                                     <span>36 Goals</span>
                                     <span>.</span>
                                     <span>120 Assist</span>
@@ -117,7 +117,7 @@
                             <img src="source/Rectangle 144 (4).png" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Sergio Ramos</h5>
-                                <p class="text-secondary">
+                                <p class="text-secondary my-3 ">
                                     <span>36 Goals</span>
                                     <span>.</span>
                                     <span>120 Assist</span>
@@ -132,7 +132,7 @@
                             <img src="source/Rectangle 144 (5).png" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Renato Sanches</h5>
-                                <p class="text-secondary">
+                                <p class="text-secondary my-3 ">
                                     <span>36 Goals</span>
                                     <span>.</span>
                                     <span>120 Assist</span>
@@ -147,7 +147,7 @@
                             <img src="source/Rectangle 144.png" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Lionel Messi</h5>
-                                <p class="text-secondary">
+                                <p class="text-secondary my-3 ">
                                     <span>36 Goals</span>
                                     <span>.</span>
                                     <span>120 Assist</span>
@@ -162,7 +162,7 @@
                             <img src="source/Rectangle 144.png" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Lionel Messi</h5>
-                                <p class="text-secondary">
+                                <p class="text-secondary my-3 ">
                                     <span>36 Goals</span>
                                     <span>.</span>
                                     <span>120 Assist</span>
@@ -177,7 +177,7 @@
                             <img src="source/Rectangle 144.png" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Lionel Messi</h5>
-                                <p class="text-secondary">
+                                <p class="text-secondary my-3 ">
                                     <span>36 Goals</span>
                                     <span>.</span>
                                     <span>120 Assist</span>
@@ -195,7 +195,7 @@
             <!-- ------------------------------ -->
             <!--main--aside-part start -->
             <!-- div-1-players -->
-            <section class="aside w-25 d-flex flex-column text-white">
+            <section class="aside w-25  d-flex mb-3 align-self-center align-self-md-auto flex-column text-white">
                 <div class="aside-1 card bg-black ">
                     <h5 class="my-3 text-center card-title">Selected-5</h5>
                     <ol class="text-secondary">
@@ -209,27 +209,28 @@
                 <!-- div-2-calculate -->
                 <div class="aside-2 mt-3 card bg-black ">
                     <h5 class="py-3 card-title text-center">Budgets</h5>
-                    <div class=" d-flex justify-content-between text-secondary">
+                    <div class=" d-flex flex-sm-column flex-md-row justify-content-between text-secondary">
                         <p class="px-3">Per Player</p>
-                        <p class="px-3 "><input class="w-100" type="text"></p>
+                        <p class="px-3"><input id="per-player-expensive-js" class="w-100" type="number"></p>
                     </div>
-                    <button class="btn bg-primary my-3 rounded-0 text-white">Calculate</button>
-                    <div class=" d-flex justify-content-between text-secondary">
+                    <button class="btn bg-primary my-3 rounded-0 text-white" id="calculate-player-expensive-js">Calculate</button>
+                    <div class=" d-flex flex-sm-column flex-md-row justify-content-between text-secondary">
                         <p class="px-3">Player Expenses</p>
-                        <p class="px-3 ">$500</p>
+                        <p class="px-3">$ <span id="total-player-expensive-js">00</span></p>
                     </div>
-                    <div class=" d-flex justify-content-between text-secondary">
+                    <div class=" d-flex flex-sm-column flex-md-row justify-content-between text-secondary">
                         <p class="px-3">Manager</p>
-                        <p class="px-3 "><input class="w-100" type="text"></p>
+                        <p class="px-3 "><input id="manager-expensive-js" class="w-100" type="number"></p>
                     </div>
-                    <div class=" d-flex justify-content-between text-secondary">
-                        <p class="px-3">Coach</p>
-                        <p class="px-3 "><input class="w-100" type="text" name="" id=""></p>
+                    <div class=" d-flex flex-sm-column flex-md-row justify-content-between text-secondary">
+                        <p class="px-3" id="coach-expensive">Coach</p>
+                        <p class="px-3 "><input id="coach-expensive-js" class="w-100" type="number"></p>
                     </div>
-                    <button class="btn bg-primary my-3 rounded-0 text-white">Calculate Total</button>
-                    <div class=" d-flex justify-content-between text-secondary">
+                    <button class="btn bg-primary my-3 rounded-0 text-white" id="calculate-total-js">Calculate
+                        Total</button>
+                    <div class=" d-flex flex-sm-column flex-md-row justify-content-between text-secondary">
                         <p class="px-3">Total</p>
-                        <p class="px-3 total-money">$11000</p>
+                        <p class="px-3 total-money">$ <span id="total-expensive-js">00</span></p>
                     </div>
                 </div>
             </section>
@@ -249,7 +250,7 @@
         crossorigin="anonymous"></script>
     <!--  -->
     <!-- Custom Script File -->
-
+<script src="style.js"></script>
     <!--  -->
 </body>
 
