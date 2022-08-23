@@ -6,7 +6,7 @@ function inputValueById(targetedElementId) {
     return inputValue;
 }
 // =============//
-// 
+
 // create-new-li
 function createNewLi(text) {
     const li = document.createElement("li")

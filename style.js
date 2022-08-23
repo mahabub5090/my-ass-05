@@ -8,7 +8,7 @@ for (const selectBtn of selectBtns) {
         const targetEventPlayer = parent.querySelector("h5")
         const targetEventPlayerName = targetEventPlayer.innerText
         const counter = (document.getElementById("ol").childNodes.length) - 1;
-        console.log(counter)
+       
         if (counter >= 5) {
             alert("You Can't Select More Then 5 Player")
         }
