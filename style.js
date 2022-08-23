@@ -10,7 +10,7 @@ for (const selectBtn of selectBtns) {
         const counter = (document.getElementById("ol").childNodes.length) - 1;
        
         if (counter >= 5) {
-            alert("You Can't Select More Then 5 Player")
+            alert("Already 5 Player Selected")
         }
         else {
             createNewLi(targetEventPlayerName)
