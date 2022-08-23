@@ -1,24 +1,43 @@
+//======================== player Selection ================================//
+
+const selectBtns = document.getElementsByClassName("select-btn")
+for (const selectBtn of selectBtns) {
+    selectBtn.addEventListener("click", function (e) {
+        const targetBtn = e.target;
+        const parent = targetBtn.parentNode.parentNode
+        const targetEventPlayer = parent.querySelector("h5")
+        const targetEventPlayerName = targetEventPlayer.innerText
+        const counter = (document.getElementById("ol").childNodes.length) - 1;
+        console.log(counter)
+        if (counter >= 5) {
+            alert("You Can't Select More Then 5 Player")
+        }
+        else {
+            createNewLi(targetEventPlayerName)
+
+            targetBtn.disabled = true;
+
+            targetBtn.classList.add("bg-danger");
+            
+        }
+    })
+}
+
 
 // =============================== total cost part ========================== //
 
-//================common function==========//
-function inputValueById(targetedElementId) {
-    const inputFieldElement = document.getElementById(targetedElementId);
-    const inputFieldValue = inputFieldElement.value;
-    const inputValue = parseFloat(inputFieldValue);
-    return inputValue;
-}
-// =============//
-// 
-const totalPlayer = 5;
+
+
 
 const playerExpensiveCalculate = document.getElementById("calculate-player-expensive-js")
 playerExpensiveCalculate.addEventListener("click", function () {
     const perPlayerExpensive = inputValueById("per-player-expensive-js")
     if (perPlayerExpensive >= 0) {
+        const totalPlayer = parseInt((document.getElementById("ol").childNodes.length) - 1);
         const calculate = totalPlayer * perPlayerExpensive;
         const totalPlayerExpensive = document.getElementById("total-player-expensive-js");
         totalPlayerExpensive.innerText = calculate;
+        console.log(calculate)
 
     }
     else {
